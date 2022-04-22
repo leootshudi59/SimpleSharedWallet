@@ -4,7 +4,35 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawMoney",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +61,11 @@
 	},
 	"sources": {
 		"contracts/SimpleWallet.sol": {
-			"keccak256": "0x4573b1f1b6ec2995d5fed9a34a2ef16875b4fb15e912dc68e968db6c6ed12bdf",
+			"keccak256": "0x7b5830d3e7a667d5010c2790074ef9fa2d008316da4833474bc94be407bb0b6f",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://3cc9559affd4a17eaf43dd7d5075aed70b2b53303c7b9a3b4b40ba48b2581621",
-				"dweb:/ipfs/QmSoNgkru4tdFbCC9pSqM7yZ3ZpazAFQa539ojcuBSDMWh"
+				"bzz-raw://7b330bffffeb383500fc1bb27a754fbafa69efac7553e8a9f30c4907041eda59",
+				"dweb:/ipfs/QmajDhZYDgXZ4DMTRP3VQ2qmw9CuoN3hbGfLCjcgtskhig"
 			]
 		}
 	},
