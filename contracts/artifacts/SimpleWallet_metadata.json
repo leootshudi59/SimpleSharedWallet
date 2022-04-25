@@ -29,6 +29,38 @@
 				"type": "fallback"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "owner",
 				"outputs": [
@@ -44,6 +76,24 @@
 			{
 				"inputs": [],
 				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_who",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountAllowed",
+						"type": "uint256"
+					}
+				],
+				"name": "setAllowance",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -118,11 +168,11 @@
 	},
 	"sources": {
 		"contracts/SimpleWallet.sol": {
-			"keccak256": "0x3a016df30051960b1ee09ced7da7f016f0baf7e9278f2b327e1cfd88387584ab",
+			"keccak256": "0xbf412e5a58e8357a3cf89b0643cc998aaff1206684bd57fe0f37e430785227df",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://8d007d61b3b7d7cecd5e89c62bcbbf4177acaabfc5b3fec3ead428d34e8aec33",
-				"dweb:/ipfs/QmPJrXbhKT1WS53nBmQ5b79zQeM89cRtpneMtQzDyPKirf"
+				"bzz-raw://b7a5368bc85a7eb888f6de68d91d1a01103df52f642102a8f459bb6a99c71d4e",
+				"dweb:/ipfs/QmWnDYubEDga1xFPyLYE3oRV9SfdXP8gkCMavvmbQBcbfe"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol": {
