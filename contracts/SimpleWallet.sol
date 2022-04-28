@@ -6,6 +6,8 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 
 contract Allowance is Ownable {
 
+    event AllowanceChanged(address indexed _forWho, address indexed fromWhom, uint oldAmount, uint newAmount);
+
     mapping (address => uint) public allowance;
 
     function isOwner() public view returns(bool) {
@@ -13,10 +15,13 @@ contract Allowance is Ownable {
     }
     // Gives to a wallet address the allowance to withdraw a certain amout
     function setAllowance(address _who, uint _amountAllowed) public onlyOwner {
+        emit AllowanceChanged(_who, msg.sender, allowance[_who], _amountAllowed);
+
         allowance[_who] = _amountAllowed;
     }
     
     function reduceAllowance(address _who, uint _amountToReduce) internal {
+        emit AllowanceChanged(_who, msg.sender, allowance[_who], allowance[_who] - _amountToReduce);
         allowance[_who] -= _amountToReduce;
     }
 
@@ -29,6 +34,9 @@ contract Allowance is Ownable {
 
 contract SimpleWallet is Allowance {
 
+    event MoneySent(address indexed _beneficiary, uint _amount);
+    event MoneyReceived(address indexed _sender, uint _amount);
+
     // To withdraw money you have to be the contract owner or to be allowed
     // If you are contract owner, you can withdraw money unlimitedly
     function withdrawMoney(address payable _to, uint _amount) public ownerOrAllowed(_amount) {
@@ -36,10 +44,11 @@ contract SimpleWallet is Allowance {
         if(!isOwner()) {
             reduceAllowance(msg.sender, _amount);
         }
+        emit MoneySent(_to, _amount);
         _to.transfer(_amount);
     }
     
     fallback () external payable {
-
+        emit MoneyReceived(msg.sender, msg.value);
     }
 }

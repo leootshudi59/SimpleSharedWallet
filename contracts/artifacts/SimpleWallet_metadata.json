@@ -11,6 +11,75 @@
 					{
 						"indexed": true,
 						"internalType": "address",
+						"name": "_forWho",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "fromWhom",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "oldAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "AllowanceChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "MoneyReceived",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_beneficiary",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "MoneySent",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
 						"name": "previousOwner",
 						"type": "address"
 					},
@@ -168,11 +237,11 @@
 	},
 	"sources": {
 		"contracts/SimpleWallet.sol": {
-			"keccak256": "0xbf412e5a58e8357a3cf89b0643cc998aaff1206684bd57fe0f37e430785227df",
+			"keccak256": "0x78aacb7c81ab66d108627322e0133c6519e2b916267b040709e0d92297fe0a5a",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://b7a5368bc85a7eb888f6de68d91d1a01103df52f642102a8f459bb6a99c71d4e",
-				"dweb:/ipfs/QmWnDYubEDga1xFPyLYE3oRV9SfdXP8gkCMavvmbQBcbfe"
+				"bzz-raw://00b37293eb19bc8cce7896155dcb91f75e0b2ee5914a650f9e168dd49579433d",
+				"dweb:/ipfs/QmeqN9cp9Vxo5bSKSRMkD3KM16U1Z1mwZxDM3vFLRoHh9A"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol": {
