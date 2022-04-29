@@ -42,44 +42,6 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "_sender",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "_amount",
-						"type": "uint256"
-					}
-				],
-				"name": "MoneyReceived",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "_beneficiary",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "_amount",
-						"type": "uint256"
-					}
-				],
-				"name": "MoneySent",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
 						"name": "previousOwner",
 						"type": "address"
 					},
@@ -92,10 +54,6 @@
 				],
 				"name": "OwnershipTransferred",
 				"type": "event"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "fallback"
 			},
 			{
 				"inputs": [
@@ -179,24 +137,6 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "_to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_amount",
-						"type": "uint256"
-					}
-				],
-				"name": "withdrawMoney",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -222,7 +162,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleWallet.sol": "SimpleWallet"
+			"contracts/Allowance.sol": "Allowance"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -242,14 +182,6 @@
 			"urls": [
 				"bzz-raw://814823b0d1e2c3c9347d2b0f7632dfe546986b7042fe8082053df985cb12a646",
 				"dweb:/ipfs/QmeW9YwKTwNoEPxQoAC9RPgHQdWVd1uX2uhnUYVQUR6tiS"
-			]
-		},
-		"contracts/SimpleWallet.sol": {
-			"keccak256": "0xe80a9d550205877f15c2b87f8ee1159c088cd6bf1ef567144954d8371720ba67",
-			"license": "UNLICENSED",
-			"urls": [
-				"bzz-raw://71aee721287b905123f1fdc1fe5bd947ca9cac828d9d4eb153f62e8bb5913df6",
-				"dweb:/ipfs/QmS2oKoRUB9mAzXKVBae6MAxDg7c6BpxoPehsWzBjJGRb2"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol": {
