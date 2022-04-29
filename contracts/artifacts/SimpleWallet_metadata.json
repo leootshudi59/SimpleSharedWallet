@@ -237,11 +237,11 @@
 	},
 	"sources": {
 		"contracts/SimpleWallet.sol": {
-			"keccak256": "0x78aacb7c81ab66d108627322e0133c6519e2b916267b040709e0d92297fe0a5a",
+			"keccak256": "0xb101231f8e6e6e23b972d8dbcc5073b8468ef38bf9c80a494d8db6602992f408",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://00b37293eb19bc8cce7896155dcb91f75e0b2ee5914a650f9e168dd49579433d",
-				"dweb:/ipfs/QmeqN9cp9Vxo5bSKSRMkD3KM16U1Z1mwZxDM3vFLRoHh9A"
+				"bzz-raw://03a46f5ce402c9b7fa7b4ecc55b9cf5a6d1d52eaec9939161c48c2c02e365d75",
+				"dweb:/ipfs/QmYjkDY5fEjjY5X3UNZExkb4nbDHGjGSXn7o9TeLaReWZb"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol": {
@@ -258,6 +258,14 @@
 			"urls": [
 				"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
 				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol": {
+			"keccak256": "0x0f633a0223d9a1dcccfcf38a64c9de0874dfcbfac0c6941ccf074d63a2ce0e1e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://864a40efcffdf408044c332a5aa38ec5618ed7b4eecb8f65faf45671bd6cdc65",
+				"dweb:/ipfs/QmQJquTMtc6fgm5JQzGdsGpA2fqBe3MHWEdt2qzaLySMdN"
 			]
 		}
 	},
