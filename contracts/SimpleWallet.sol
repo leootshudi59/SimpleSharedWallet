@@ -39,6 +39,10 @@ contract SimpleWallet is Allowance {
     event MoneySent(address indexed _beneficiary, uint _amount);
     event MoneyReceived(address indexed _sender, uint _amount);
 
+    function renounceOwnership() public override virtual onlyOwner {
+        revert("Cannot renounce ownership");
+    }
+    
     // To withdraw money you have to be the contract owner or to be allowed
     // If you are contract owner, you can withdraw money unlimitedly
     function withdrawMoney(address payable _to, uint _amount) public ownerOrAllowed(_amount) {
